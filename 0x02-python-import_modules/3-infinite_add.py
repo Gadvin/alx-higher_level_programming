@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 import sys
 
+
 def add_arguments(*args):
     result = 0
     for arg in args:
         result += int(arg)
     return result
 
+
 if __name__ == '__main__':
-    # Get all command-line arguments except the script name (sys.argv[0])
     arguments = sys.argv[1:]
 
     # Check if there are arguments to add
