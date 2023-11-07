@@ -11,19 +11,14 @@
 
 void print_python_list_info(PyObject *p)
 {
-	PyListObject *py_list = NULL;
-	ssize_t list_len = 0;
-	ssize_t i = 0;
-	const char *ele_type = NULL;
+	Py_ssize_t list_size, i;
 
-	list_len = PyList_Size(p);
-	py_list = (PyListObject *)p;
-	printf("[*] Size of the Python List = %ld\n", list_len);
-	printf("[*] Allocated = %ld\n", (signed long)(py_list->allocated));
-	while (i < list_len)
-	{
-		ele_type = Py_TYPE(py_list->ob_item[i])->tp_name;
-		printf("Element %ld: %s\n", i, ele_type);
-		i++;
-	}
+	list_size = PyList_Size(p);
+	printf("[*] Size of the Python List = %ld\n", list_size);
+	printf("[*] Allocated = %ld\n", ((PyListObject *)p)->allocated);
+
+	for (i = 0; i < list_size; i++) {
+		PyObject *item = PyList_GetItem(p, i);
+		printf("Element %ld: %s\n", i, Py_TYPE(item)->tp_name);
+		}
 }
