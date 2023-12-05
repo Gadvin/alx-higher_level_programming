@@ -2,7 +2,6 @@
 """a Rectangle class."""
 
 
-
 class Rectangle():
     """rectangle class for storing rectangle data
     """
