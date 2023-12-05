@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Has the MyList class"""
+
 
 class MyList(list):
     """ifunction to extended version of list
