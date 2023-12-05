@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Function that Defines a file-writing function."""
+
 
 def number_of_lines(filename=""):
     """function to get the number of lines from filename
