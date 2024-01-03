@@ -3,7 +3,7 @@
 import json
 
 
-def save_to_json_string(my_obj, filename):
+def save_to_json_file(my_obj, filename):
     """function that returs json string containing object's
     representation
         -> handles no exceptions in serialization proccess
