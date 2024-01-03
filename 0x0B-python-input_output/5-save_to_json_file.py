@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-
+"""Defines a JSON file-writing function."""
 import json
 
-def to_json_string(my_obj):
+
+def save_to_json_string(my_obj):
     """function that returs json string containing object's
     representation
         -> handles no exceptions in serialization proccess

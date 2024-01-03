@@ -1,13 +1,15 @@
 #!/usr/bin/python3
-"""Function that Defines a file-appending function."""
+"""Definition of  a file-appending function."""
 
 
-def read_lines(filename="", nb_lines=0):
-    """function to read no of  lines from file and prints to stdout
+def append_write(filename="", text=""):
+    """function that Appends a string to the end of a UTF8 text file
+
+    Args:
+        filename (str): The name of the file to append to.
+        text (str): The string to append to the file.
+    Returns:
+        The number of characters appended.
     """
-    printed = 0
-    with open(filename, encoding='utf-8') as myFile:
-        for line in myFile:
-            if printed < nb_lines or nb_lines <= 0:
-                print(line, end='')
-                printed += 1
+    with open(filename, "a", encoding="utf-8") as f:
+        return f.write(text)
