@@ -2,7 +2,7 @@
 """Function that Defines a file-writing function."""
 
 
-def write_file(filename=""):
+def write_file(filename="", text=""):
     """function to get the number of lines from filename
 
     Args:
@@ -11,5 +11,5 @@ def write_file(filename=""):
     Returns:
         The number of characters written.
     """
-    with open(filename, encoding='utf-8') as myFile:
-        return sum([1 for line in myFile])
+    with open(filename, "w", encoding="utf-8") as f:
+        return f.write(text)
