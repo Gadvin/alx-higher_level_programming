@@ -8,4 +8,5 @@ def load_from_json_string(my_str):
     desializes a JSON string back to a python object
         -> handles NO exceptions
     """
-    return json.loads(my_str)
+     with open(filename) as f:
+        return json.load(f)

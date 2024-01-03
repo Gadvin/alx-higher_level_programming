@@ -8,4 +8,5 @@ def save_to_json_string(my_obj):
     representation
         -> handles no exceptions in serialization proccess
     """
-    return json.dumps(my_obj)
+    with open(filename, "w") as f:
+        json.dump(my_obj, f)

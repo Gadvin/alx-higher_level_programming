@@ -2,7 +2,7 @@
 """Function that Defines a file-writing function."""
 
 
-def number_of_lines(filename=""):
+def write_file(filename=""):
     """function to get the number of lines from filename
 
     Args:
