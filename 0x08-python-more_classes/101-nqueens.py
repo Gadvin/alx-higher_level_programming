@@ -5,6 +5,7 @@ module for calculation of n-queens problem
 """
 import sys
 
+
 class Solution_Board:
     """class for use with n queens problem
     """
@@ -22,6 +23,7 @@ class Solution_Board:
         if not isinstance(num, int):
             raise TypeError("num should be an int")
         self.__num = value
+
 
 args = sys.argv
 
@@ -43,6 +45,7 @@ while running:
     sol = get_n_queens(board)
     solutions.append(sol)
     running = False
+
 
 def get_n_queens(chess_board, column, num):
     if column >= num:
