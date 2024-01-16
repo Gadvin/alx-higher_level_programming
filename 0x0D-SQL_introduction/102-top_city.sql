@@ -1,0 +1,9 @@
+-- script to list avg temp per city
+-- DML query to list avg temp
+SELECT city,avg_temp FROM (SELECT city,
+ AVG(value) AS avg_temp
+ FROM temperatures
+ WHERE month = 7 OR month = 8
+ GROUP BY city
+ ORDER BY AVG(value) DESC) results
+ LIMIT 3;
